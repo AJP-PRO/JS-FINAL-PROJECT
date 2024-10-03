@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./Styles.css">
+    <script src="./index.js" defer></script>
+    <script src="https://kit.fontawesome.com/34da48673d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <section id="landing">
+        <nav>
+            <div class="row">
+                <div class="nav__container">
+                    <div class="background">
+                        <img class="background__img" src="./Assets/LoTR_Ring background.jpg" alt="">
+                    </div>
+                    <div class="nav__wrapper">
+                        <div class="logo">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            <h1 class="logo__title">LoTR Media</h1>
+                        </div>
+                        <ul class="nav__links">
+                            <li><a href="#" class="nav__link">Home</a></li>
+                            <li><a href="#" class="nav__link">Find Media</a></li>
+                            <li><a href="#" class="nav__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="search__wrapper">
+                        <h1 class="nav__title"> Browse the Epics</h1>
+                        <div class="search__wrapper--icon">
+                            <input class="search__bar" type="text" placeholder="Search by production year, title, or keyword ">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="search__results">
+        <h1 class="search__h1">Search Results: </h1>
+        <select id="filter">
+            <option value="" disabled selected>Sort</option>
+            <option value="OLD_TO_NEW">Production date, old to new</option>
+            <option value="NEW_TO_OLD">Production date, new to old</option>
+            <option value="GAMES">Games</option>
+            <option value="MOVIES">Movies</option>
+        </select>
+    </section>
+    <div class="media">
+        <i class="fas fa-spinner books__loading--spinner"></i>
+        </div>
+    </div>
 </body>
 </html>

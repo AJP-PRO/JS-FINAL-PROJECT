@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+
+/* LANDING */
+
+.background__img {
+  max-height: 500px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.logo {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 20px;
+}
+.logo__title {
+  padding-right: 8px;
+}
+
+.fa-clapperboard {
+  margin: 0 12px;
+  font-size: 32px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  margin: 0 12px;
+}
+
+.search__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.nav__title {
+  color: yellow;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 50px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.search__bar {
+  border-radius: 20px;
+  padding: 8px;
+  width: 100%;
+  background-color: rgb(208, 205, 181);
+}
+
+.search__wrapper--icon {
+ position: relative;
+ width: 100%;
+ max-width: 500px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+}
+
+/* SEARCH RESULTS */
+
+.search__results {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 250px 50px;
+  letter-spacing: 1px;
+}
+
+.select {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 200px;
+}
