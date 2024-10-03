@@ -12,8 +12,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 a {
   text-decoration: none;
+}
+
+ul {
+list-style: none;
 }
 
 /* LANDING */
@@ -62,12 +67,19 @@ a {
   display: flex;
   align-items: center;
 }
+
 .nav__link {
   display: flex;
   justify-content: center;
   align-items: center;
   color: yellow;
   margin: 0 12px;
+  transition: all 300ms ease;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+
 }
 
 .search__wrapper {
@@ -114,7 +126,10 @@ a {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin: 250px 50px;
+  margin-top: 250px;
+  margin-bottom: 75px;
+  margin-right: 50px;
+  margin-left: 50px;
   letter-spacing: 1px;
 }
 
@@ -129,4 +144,52 @@ a {
   padding: 0 16px;
   width: 100%;
   max-width: 200px;
+}
+
+/* MEDIA */
+
+/* `<div class="media">
+            <figure class="poster--wrapper">
+                <img class="poster" src="${media.Poster}" alt="">
+            </figure>
+                <div class="media__title">
+                    ${media.Title}
+                </div>
+                <div class="media__type">
+                    ${media.Type}
+                </div>
+                 <div class="media__year">
+                    ${media.Year}
+                </div>
+        </div>`;
+        */
+
+.media {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.media__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster {
+max-width: 200px;
+}
+
+.media__title {
+    font-weight: 700;
+}
+
+.media__type {
+    font-weight: 700;
+}
+
+.media__year {
+    font-weight: 700;
 }
