@@ -6,6 +6,8 @@
 let mediaData = []
 const mediaList = document.querySelector(".media");
 
+
+
 async function main() {
     const movies = await fetch("https://www.omdbapi.com/?apikey=a7412df9&s=hobbit");
     const movies2 = await fetch("https://omdbapi.com/?apikey=a7412df9&s=lord%20of%20the%20rings");
@@ -40,3 +42,14 @@ main();
         </div>
     </div>`;
     }
+
+
+/* SORTING */
+
+if (filter === "OLD_TO_NEW") {
+    media.sort((a, b) => (a.Year - b.Year));
+} 
+
+function filterMedia(event) {
+    renderMedia(event.target.value);
+}

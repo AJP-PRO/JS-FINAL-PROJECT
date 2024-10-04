@@ -105,7 +105,7 @@ list-style: none;
   border-radius: 20px;
   padding: 8px;
   width: 100%;
-  background-color: rgb(208, 205, 181);
+  background-color: bisque;
 }
 
 .search__wrapper--icon {
@@ -126,11 +126,10 @@ list-style: none;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin-top: 250px;
-  margin-bottom: 75px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-top: 215px;
   letter-spacing: 1px;
+  padding: 32px;
+  background-color: rgb(209, 209, 209);
 }
 
 .select {
@@ -148,48 +147,47 @@ list-style: none;
 
 /* MEDIA */
 
-/* `<div class="media">
-            <figure class="poster--wrapper">
-                <img class="poster" src="${media.Poster}" alt="">
-            </figure>
-                <div class="media__title">
-                    ${media.Title}
-                </div>
-                <div class="media__type">
-                    ${media.Type}
-                </div>
-                 <div class="media__year">
-                    ${media.Year}
-                </div>
-        </div>`;
-        */
+.media__section {
+ background-color: bisque;
+}
 
-.media {
+.media__style {
     padding: 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .media__wrapper {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin: 24px;
 }
 
 .poster {
 max-width: 200px;
+margin: 12px 0;
 }
 
 .media__title {
     font-weight: 700;
+    margin: 0 auto;
+    width: 100%;
+    border: solid silver 1px;
+    max-width: 200px;
+    background-color: white;
 }
 
 .media__type {
     font-weight: 700;
+    border: solid silver 1px;
+    background-color: white;
 }
 
 .media__year {
     font-weight: 700;
+    border: solid silver 1px;
+    background-color: white;
 }
