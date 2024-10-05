@@ -175,19 +175,25 @@ margin: 12px 0;
     font-weight: 700;
     margin: 0 auto;
     width: 100%;
-    border: solid silver 1px;
+    border: solid rgb(148, 148, 148) 1px;
     max-width: 200px;
-    background-color: white;
+    background-color: silver;
+    border-radius: 10%;
+    padding: 3px;
 }
 
 .media__type {
     font-weight: 700;
-    border: solid silver 1px;
-    background-color: white;
+    border: solid rgb(148, 148, 148) 1px;
+    background-color: silver;
+    border-radius: 10%;
+    padding: 3px
 }
 
 .media__year {
     font-weight: 700;
-    border: solid silver 1px;
-    background-color: white;
+    border: solid rgb(148, 148, 148) 1px;
+    background-color: silver;
+    border-radius: 10%;
+    padding: 3px
 }

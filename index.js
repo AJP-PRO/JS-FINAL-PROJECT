@@ -46,10 +46,24 @@ main();
 
 /* SORTING */
 
-if (filter === "OLD_TO_NEW") {
-    media.sort((a, b) => (a.Year - b.Year));
-} 
+// if (filter === "OLD_TO_NEW") {
+//     media.sort((a, b) => (a.Year - b.Year));
+// } 
+// else if (filter === "NEW_TO_OLD") {
+//     media.sort((a, b) => (b.Year - a.Year));
+// }
+
+// // if filter = games, then return all objects with type "game"
+
+// else if (fiter === "GAMES") {
+//     // return (media.Type = game ? )
+// }
+
+// // if filter = movie, then return all objects with type "movie"
+
+// else if (fiter === "MOVIES") {
+//}
 
 function filterMedia(event) {
-    renderMedia(event.target.value);
+    console.log(event.target.value);
 }
