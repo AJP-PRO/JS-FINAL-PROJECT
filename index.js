@@ -1,8 +1,10 @@
 
 // API 1: https://www.omdbapi.com/?apikey=a7412df9&s=hobbit
 // API 2: https://omdbapi.com/?apikey=a7412df9&s=lord%20of%20the%20rings
+
 let mediaData = [];
 const mediaList = document.querySelector(".media");
+
 async function main() {
   const movies = await fetch(
     "https://www.omdbapi.com/?apikey=a7412df9&s=hobbit"
@@ -16,6 +18,7 @@ async function main() {
   mediaList.innerHTML = mediaData.map((media) => mediaHTML(media)).join("");
 }
 main();
+
 /* RENDER HTML */
 function mediaHTML(media) {
   return `<div class="media">
@@ -23,6 +26,7 @@ function mediaHTML(media) {
             <figure class="poster--wrapper">
             <img class="poster" src="${media.Poster}" alt="">
             </figure>
+            <div class="info__wrapper">
             <div class="media__title">
                 ${media.Title}
             </div>
@@ -31,6 +35,7 @@ function mediaHTML(media) {
             </div>
              <div class="media__year">
                 ${media.Year}
+            </div>
             </div>
         </div>
     </div>`;
