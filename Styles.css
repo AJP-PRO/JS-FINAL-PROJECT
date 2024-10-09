@@ -221,3 +221,36 @@ ul {
   background-color: rgb(209, 209, 209);
   padding: 3px;
   border-top: none;
+}
+
+@media (max-width: 760px) {
+  .search__wrapper {
+    padding-top: 32px;
+  }
+
+  .search__results {
+    margin-top: 100px;
+  }
+
+  .poster {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search__wrapper {
+    padding-top: 0;
+  }
+
+  .nav__wrapper {
+    padding-bottom: 0;
+  }
+
+  .search__results {
+    margin-top: 0px;
+  }
+
+  .poster {
+    max-height: 150px;
+  }
+}

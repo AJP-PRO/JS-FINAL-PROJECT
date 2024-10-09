@@ -5,13 +5,21 @@
 let mediaData = [];
 const mediaList = document.querySelector(".media");
 
+
+async function onSearchChange(event) {
+    const id = event.target.value;
+    const movies = await fetch(`https://www.omdbapi.com/?apikey=a7412df9&s=${id}`);
+    const movies2 = await fetch(`https://omdbapi.com/?apikey=a7412df9&s=${id}`);
+    const movieData = await movies.json();
+    const movieData2 = await movies2.json();
+    mediaData = [...movieData.Search, ...movieData2.Search];
+    mediaList.innerHTML = mediaData.map((media) => mediaHTML(media)).join("");
+}
+
 async function main() {
-  const movies = await fetch(
-    "https://www.omdbapi.com/?apikey=a7412df9&s=hobbit"
-  );
-  const movies2 = await fetch(
-    "https://omdbapi.com/?apikey=a7412df9&s=lord%20of%20the%20rings"
-  );
+    const id = localStorage.getItem("id")
+  const movies = await fetch("https://www.omdbapi.com/?apikey=a7412df9&s=hobbit");
+  const movies2 = await fetch("https://omdbapi.com/?apikey=a7412df9&s=lord%20of%20the%20rings");
   const movieData = await movies.json();
   const movieData2 = await movies2.json();
   mediaData = [...movieData.Search, ...movieData2.Search];
@@ -43,7 +51,7 @@ function mediaHTML(media) {
 
 function filterMedia(event) {
   const filter = event.target.value;
-  let filteredMedia = [...mediaData]; // Create a copy of the original data
+  let filteredMedia = [...mediaData];
 
   if (filter === "OLD_TO_NEW") {
     filteredMedia.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
